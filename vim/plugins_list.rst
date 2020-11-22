@@ -18,7 +18,7 @@ coc.nvim: Intellisense engine for vim8 & neovim, full language server protocol s
 表示系
 ---------------------------------------------
 nerdtree: a tree explorer plugin for vim.
-- https://github.com/scrooloose/nerdtree
+- https://github.com/preservim/nerdtree
 
 nerdtree-git-plugin: show git stauts on nerdtree
 - https://github.com/Xuyuanp/nerdtree-git-plugin
@@ -54,6 +54,8 @@ eregex.vim: Perl/Ruby style regexp notation for Vim
 grep.vim: Plugin to integrate Grep search tools with Vim
 - https://github.com/yegappan/grep
 
+ctrlpvim/ctrlp.vim : ファイル/Bufferの曖昧検索
+
 ---------------------------------------------
 バッファ管理系
 ---------------------------------------------
@@ -68,6 +70,26 @@ minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを�
 開発系
 ---------------------------------------------
 ちょくちょく整備する
+w0rp/ale : 各種Lintを非同期実行できるプラグイン
+- https://github.com/dense-analysis/ale
+
+tpope/vim-fugitive : git status とか使える
+- https://github.com/tpope/vim-fugitive
+
+airblade/vim-gitgutter : gitで管理しているファイルの場合、差分表現を表示
+- https://github.com/airblade/vim-gitgutter
+
+c9s/cascading : php/perl/rubyで改行してくれる
+- https://github.com/c9s/cascading.vim
+
+preservim/nerdcommenter : コメントアウト
+- https://github.com/preservim/nerdcommenter
+
+godlygeek/tabular : テキスト整形(CSVとか読みやすくするため)
+- https://github.com/godlygeek/tabular
+
+vim-scripts/camelcasemotion : キャメルケースやスネークケースで区切る
+- https://github.com/vim-scripts/camelcasemotion
 
 ---------------------------------------------
 その他

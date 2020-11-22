@@ -11,14 +11,14 @@ source ~/dotfiles/vim/rc/plugins/camelcasemotion.rc.vim
 source ~/dotfiles/vim/rc/plugins/easymotion.rc.vim
 source ~/dotfiles/vim/rc/plugins/grep.rc.vim
 source ~/dotfiles/vim/rc/plugins/open-browser.rc.vim
-source ~/dotfiles/vim/rc/plugins/quickrun.rc.vim
+" source ~/dotfiles/vim/rc/plugins/quickrun.rc.vim
 source ~/dotfiles/vim/rc/plugins/errormarker.rc.vim
-source ~/dotfiles/vim/rc/plugins/syntastic.rc.vim
 source ~/dotfiles/vim/rc/plugins/dumbbuf.rc.vim
 source ~/dotfiles/vim/rc/plugins/minibufexpl.rc.vim
 source ~/dotfiles/vim/rc/plugins/taglist.rc.vim
-source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
+" source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
 source ~/dotfiles/vim/rc/plugins/ale.rc.vim
 source ~/dotfiles/vim/rc/plugins/coc.rc.vim
 source ~/dotfiles/vim/rc/plugins/airline.rc.vim
-source ~/dotfiles/vim/rc/plugins/go.rc.vim
+" source ~/dotfiles/vim/rc/plugins/go.rc.vim
+source ~/dotfiles/vim/rc/plugins/fzf.rc.vim

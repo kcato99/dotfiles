@@ -1,11 +1,3 @@
-" let g:airline_theme='deus'
-" set statusline=2
-" set ambiwidth=double
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#buffer_idx_mode = 1
-" let g:airline#extensions#whitespace#mixed_indent_algo = 1
-
 " モードの表示名を定義(デフォルトだと長くて横幅を圧迫するので略称にしている)
 let g:airline_mode_map = {
     \ '__' : '-',
@@ -20,12 +12,12 @@ let g:airline_mode_map = {
     \ 'S'  : 'S',
     \ }
 
-" let g:airline_mode_map = { '__' : '-', 'n' : 'N' }
-
 " パワーラインでかっこよく
 let g:airline_powerline_fonts = 1
 " カラーテーマ指定してかっこよく
-let g:airline_theme = 'badwolf'
+" https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
+" let g:airline_theme = 'badwolf'
+let g:airline_theme = 'deus'
 " タブバーをかっこよく
 let g:airline#extensions#tabline#enabled = 1
 

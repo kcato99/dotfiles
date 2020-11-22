@@ -42,7 +42,7 @@ autocmd FileType go :match goErr /\<err\>/
 " autocmd FileType javascript :highlight jsColonAtTail  cterm=underline ctermfg=lightblue guibg=darkgray
 " autocmd FileType javascript :match jsColonAtTail /:$/
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
-
+autocmd BufRead,BufNewFile *.go set filetype=go
 
 " vimdiffの色設定
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22

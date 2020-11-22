@@ -1,11 +1,6 @@
 "-------------------------------------------------------------------------------
 " 編集関連 Edit
 "-------------------------------------------------------------------------------
-" yeでそのカーソル位置にある単語をレジスタに追加
-nmap ye ;let @"=expand("<cword>")<CR>
-" Visualモードでのpで選択範囲をレジスタの内容に置き換える
-vnoremap p <Esc>;let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
-
 " Tabキーを空白に変換しない
 set noexpandtab
 
@@ -38,9 +33,9 @@ nmap yk y^
 nnoremap <silent> <C-d> d0
 
 " カーソルから行頭まで削除(インサートモード)
-inoremap <silent> <C-k> <Esc>lc^
+inoremap <silent> <C-d>e <Esc>lc0
 " カーソルから行末まで削除(インサートモード)
-inoremap <silent> <C-d> <Esc>lc$
+inoremap <silent> <C-d>0 <Esc>lc$
 " カーソルから行頭までヤンク(インサートモード)
 inoremap <silent> <C-y>e <Esc>ly0<Insert>
 " カーソルから行末までヤンク(インサートモード)
@@ -74,3 +69,6 @@ function! s:toggle_qf_window()
 endfunction
 nnoremap <silent> cw :call <SID>toggle_qf_window()<CR>
 
+" カーソル位置の単語をyankする
+nnoremap vy vawy
+" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')

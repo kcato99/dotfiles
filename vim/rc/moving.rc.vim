@@ -38,14 +38,6 @@ nnoremap gp ']
 nnoremap ( %
 nnoremap ) %
 
-" 最後に変更されたテキストを選択する
-nnoremap gc  `[v`]
-vnoremap gc <C-u>normal gc<Enter>
-onoremap gc <C-u>normal gc<Enter>
-
-" カーソル位置の単語をyankする
-nnoremap vy vawy
-
 " 矩形選択で自由に移動する
 set virtualedit+=block
 

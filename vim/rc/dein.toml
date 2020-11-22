@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'preservim/nerdtree'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 hook_add = '''
@@ -19,7 +19,7 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'c9s/cascading.vim'
 [[plugins]]
-repo = 'scrooloose/nerdcommenter.git'
+repo = 'preservim/nerdcommenter.git'
 [[plugins]]
 repo = 'godlygeek/tabular'
 [[plugins]]
@@ -37,26 +37,14 @@ repo = 'thinca/vim-ref'
 [[plugins]]
 repo = 'vim-scripts/errormarker.vim'
 [[plugins]]
-repo = 'scrooloose/syntastic'
-[[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
 [[plugins]]
 repo = 'fholgado/minibufexpl.vim'
 [[plugins]]
 repo = 'vim-scripts/taglist.vim'
 
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-[[plugins]]
-repo = 'majutsushi/tagbar'
-[[plugins]]
-repo = 'osyo-manga/vim-over'
-[[plugins]]
-repo = 'LeafCage/yankround.vim'
+repo = 'kien/ctrlp.vim'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 [[plugins]]
@@ -89,3 +77,9 @@ repo = 'osyo-manga/shabadou.vim'
 repo  = 'neoclide/coc.nvim'
 rev   = 'release'
 merge = 0
+[[plugins]]
+repo  = 'antoinemadec/coc-fzf'
+[[plugins]]
+repo  = 'josa42/coc-go'
+[[plugins]]
+repo  = 'junegunn/fzf.vim'

@@ -29,6 +29,8 @@ call NERDTreeHighlightFile('js'     , 'Red'     , 'none' , '#ffa500' , '#151515'
 call NERDTreeHighlightFile('php'    , 'Magenta' , 'none' , '#ff00ff' , '#151515')
 call NERDTreeHighlightFile('go'     , 'Magenta' , 'none' , '#ff00ff' , '#151515')
 
+" E121: Undefined variable: b:NERDTree
+autocmd VimLeave *  if !v:dying | execute 'tabdo NERDTreeClose' | endif
 
 " NERDTreeとtaglistしか残らない場合は一緒に閉じる
 function! NoExcitingBuffersLeft()

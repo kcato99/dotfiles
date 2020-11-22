@@ -24,22 +24,15 @@ call dein#load_toml('~/dotfiles/vim/rc/dein.toml', {'lazy': 0})
 call dein#load_toml('~/dotfiles/vim/rc/deinlazy.toml', {'lazy' : 1})
 
 if has('nvim')
-  call dein#load_toml('~/dotfiles/vim/rc/deinneo.toml', {})
+  " call dein#load_toml('~/dotfiles/vim/rc/deinneo.toml', {})
 endif
 
-"if dein#tap('deoplete.nvim') && has('nvim')
-"  call dein#disable('neocomplete.vim')
-"  call dein#disable('neocomplcache.vim')
-"endif
-
-call dein#add('Shougo/deoplete.nvim')
-if !has('nvim')
-  call dein#add('roxma/nvim-yarp')
-  call dein#add('roxma/vim-hug-neovim-rpc')
-endif
-let g:deoplete#enable_at_startup = 1
-
-
+" call dein#add('Shougo/deoplete.nvim')
+" if !has('nvim')
+  " call dein#add('roxma/nvim-yarp')
+  " call dein#add('roxma/vim-hug-neovim-rpc')
+" endif
+" let g:deoplete#enable_at_startup = 1
 
 call dein#end()
 call dein#save_state()
