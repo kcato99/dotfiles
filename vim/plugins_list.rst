@@ -82,8 +82,8 @@ airblade/vim-gitgutter : gitで管理しているファイルの場合、差分�
 c9s/cascading : php/perl/rubyで改行してくれる
 - https://github.com/c9s/cascading.vim
 
-preservim/nerdcommenter : コメントアウト
-- https://github.com/preservim/nerdcommenter
+tomtom/tcomment_vim : コメントアウト
+- https://github.com/tomtom/tcomment_vim
 
 godlygeek/tabular : テキスト整形(CSVとか読みやすくするため)
 - https://github.com/godlygeek/tabular

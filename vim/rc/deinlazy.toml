@@ -47,9 +47,9 @@ on_ft = ['yaml']
 [[plugins]]
 repo  = 'cespare/vim-toml'
 on_ft = ['toml']
-# [[plugins]]
-# repo  = 'cespare/vim-go'
-# on_ft = ['go']
+[[plugins]]
+repo  = 'cespare/vim-go'
+on_ft = ['go']
 [[plugins]]
 repo  = 'tpope/vim-markdown'
 on_ft = ['markdown']

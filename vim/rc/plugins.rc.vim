@@ -4,7 +4,6 @@
 
 source ~/dotfiles/vim/rc/plugins/cascading.rc.vim
 source ~/dotfiles/vim/rc/plugins/nerdtree.rc.vim
-source ~/dotfiles/vim/rc/plugins/nerdcommenter.rc.vim
 source ~/dotfiles/vim/rc/plugins/tabular.rc.vim
 source ~/dotfiles/vim/rc/plugins/smartword.rc.vim
 source ~/dotfiles/vim/rc/plugins/camelcasemotion.rc.vim
@@ -16,9 +15,9 @@ source ~/dotfiles/vim/rc/plugins/errormarker.rc.vim
 source ~/dotfiles/vim/rc/plugins/dumbbuf.rc.vim
 source ~/dotfiles/vim/rc/plugins/minibufexpl.rc.vim
 source ~/dotfiles/vim/rc/plugins/taglist.rc.vim
-" source ~/dotfiles/vim/rc/plugins/lightline.rc.vim
-source ~/dotfiles/vim/rc/plugins/ale.rc.vim
-source ~/dotfiles/vim/rc/plugins/coc.rc.vim
+source ~/dotfiles/vim/rc/plugins/go.rc.vim
+" source ~/dotfiles/vim/rc/plugins/coc.rc.vim
+source ~/dotfiles/vim/rc/plugins/lsp.rc.vim
 source ~/dotfiles/vim/rc/plugins/airline.rc.vim
-" source ~/dotfiles/vim/rc/plugins/go.rc.vim
 source ~/dotfiles/vim/rc/plugins/fzf.rc.vim
+source ~/dotfiles/vim/rc/plugins/tcomment.rc.vim

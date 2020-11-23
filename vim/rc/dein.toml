@@ -37,8 +37,6 @@ repo = 'thinca/vim-ref'
 [[plugins]]
 repo = 'vim-scripts/errormarker.vim'
 [[plugins]]
-repo = 'dense-analysis/ale'
-[[plugins]]
 repo = 'fholgado/minibufexpl.vim'
 [[plugins]]
 repo = 'vim-scripts/taglist.vim'
@@ -73,13 +71,28 @@ hook_post_update = '''
 repo = 'xwsoul/vim-zephir'
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
-[[plugins]]
-repo  = 'neoclide/coc.nvim'
-rev   = 'release'
-merge = 0
-[[plugins]]
-repo  = 'antoinemadec/coc-fzf'
-[[plugins]]
-repo  = 'josa42/coc-go'
+
+# [[plugins]]
+# repo  = 'neoclide/coc.nvim'
+# rev   = 'release'
+# merge = 0
+# [[plugins]]
+# repo  = 'antoinemadec/coc-fzf'
+# [[plugins]]
+# repo  = 'josa42/coc-go'
 [[plugins]]
 repo  = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+[[plugins]]
+repo = 'mattn/vim-lsp-icons'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
