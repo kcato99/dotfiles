@@ -71,4 +71,3 @@ nnoremap <silent> cw :call <SID>toggle_qf_window()<CR>
 
 " カーソル位置の単語をyankする
 nnoremap vy vawy
-" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')

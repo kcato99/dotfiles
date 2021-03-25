@@ -1,21 +1,51 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
+repo = 'morhetz/gruvbox'
+hook_add = '''
+  " soft/medium/hard
+  " color palette
+  " https://github.com/morhetz/gruvbox#palette
+  syntax enable
+  set background=dark
+  let g:gruvbox_bold=1
+  let g:gruvbox_italic=0
+  let g:gruvbox_transparent_bg=0
+  let g:gruvbox_underline=1
+  let g:gruvbox_undercurl=1
+  let g:gruvbox_termcolors=256
+  let g:gruvbox_contrast_dark="medium"
+  let g:gruvbox_contrast_light="medium"
+  let g:gruvbox_hls_cursor="orange"
+  let g:gruvbox_sign_column="bg1"
+  let g:gruvbox_color_column="bg1"
+  let g:gruvbox_vert_split="bg0"
+  let g:gruvbox_italicize_comments=1
+  let g:gruvbox_italicize_strings=0
+  let g:gruvbox_invert_selection=0
+  let g:gruvbox_invert_selection=0
+  let g:gruvbox_invert_indent_guides=0
+  let g:gruvbox_invert_tabline=0
+  let g:gruvbox_improved_strings=0
+  let g:gruvbox_improved_warnings=0
+  let g:gruvbox_guisp_fallback="bg"
+
+  " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
+  " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
+  autocmd MyAutoCmd VimEnter * nested colorscheme gruvbox
+'''
+[[plugins]]
 repo = 'preservim/nerdtree'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-hook_add = '''
-		nnoremap [figitive] <Nop>
-		nnoremap <Leader>g [figitive]
-		nnoremap <silent> [figitive]s :<C-u>Gstatus<CR>
-		nnoremap <silent> [figitive]d :<C-u>Gdiff<CR>
-		nnoremap <silent> [figitive]b :<C-u>Gblame<CR>
-'''
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 depends =  ['vim-fugitive']
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=100
+'''
 [[plugins]]
 repo = 'c9s/cascading.vim'
 [[plugins]]
@@ -25,40 +55,32 @@ repo = 'godlygeek/tabular'
 [[plugins]]
 repo = 'vim-scripts/camelcasemotion'
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
-[[plugins]]
-repo = 'yegappan/grep'
+repo  = 'junegunn/fzf.vim'
+on_cmd = [
+    'Files',
+    'ProjectFiles',
+    'Buffers',
+    'BLines',
+    'History',
+    'Tags',
+    'BTags',
+    'GFiles',
+    'Ag',
+]
+hook_add = '''
+nnoremap <silent> ,a :<C-u>Ag<CR>
+nnoremap <silent> ,f :<C-u>ProjectFiles<CR>
+nnoremap <silent> ,b :<C-u>Buffers<CR>
+nnoremap <silent> ,m :<C-u>History<CR>
+set rtp+=/usr/local/bin/fzf
+'''
 [[plugins]]
 repo = 'othree/eregex.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 [[plugins]]
-repo = 'thinca/vim-ref'
-[[plugins]]
-repo = 'vim-scripts/errormarker.vim'
-[[plugins]]
-repo = 'fholgado/minibufexpl.vim'
-[[plugins]]
-repo = 'vim-scripts/taglist.vim'
-
-[[plugins]]
-repo = 'kien/ctrlp.vim'
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-[[plugins]]
-repo = 'yuroyoro/yuroyoro256.vim'
-[[plugins]]
-repo = 'joshdick/onedark.vim'
-
-[[plugins]]
 repo = 'Shougo/vimproc.vim'
-hook_post_update = '''
+hook_add = '''
   if executable('gmake')
     let cmd = 'gmake'
   else
@@ -66,23 +88,14 @@ hook_post_update = '''
   endif
   let g:dein#plugin.build = cmd
 '''
-
 [[plugins]]
-repo = 'xwsoul/vim-zephir'
+repo = 'tyru/open-browser.vim'
+[[plugins]]
+repo = 'fholgado/minibufexpl.vim'
+[[plugins]]
+repo = 'preservim/tagbar'
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
-
-# [[plugins]]
-# repo  = 'neoclide/coc.nvim'
-# rev   = 'release'
-# merge = 0
-# [[plugins]]
-# repo  = 'antoinemadec/coc-fzf'
-# [[plugins]]
-# repo  = 'josa42/coc-go'
-[[plugins]]
-repo  = 'junegunn/fzf.vim'
-
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 [[plugins]]
@@ -93,6 +106,9 @@ repo = 'prabirshrestha/vim-lsp'
 repo = 'mattn/vim-lsp-settings'
 [[plugins]]
 repo = 'mattn/vim-lsp-icons'
-
 [[plugins]]
-repo = 'tomtom/tcomment_vim'
+repo = 'vim-airline/vim-airline'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'

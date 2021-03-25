@@ -56,9 +56,10 @@ let g:lsp_settings['gopls'] = {
   \  },
   \}
 
+
 autocmd BufWritePre <buffer> LspDocumentFormatSync
-autocmd BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')
-autocmd BufWritePre <buffer> LspDocumentDiagnostics
+" autocmd BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')
+" autocmd BufWritePre <buffer> LspDocumentDiagnostics
 
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"

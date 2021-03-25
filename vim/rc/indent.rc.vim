@@ -13,10 +13,8 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.zep setfiletype zep
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 
-  "ファイルタイプの検索を有効にする
-  filetype plugin on
-  "そのファイルタイプにあわせたインデントを利用する
-  filetype indent on
+  " filetypeの判定は basic.rc.vim で設定してる
+
   " これらのftではインデントを無効に
   "autocmd FileType php filetype indent off
 
@@ -52,4 +50,5 @@ if has("autocmd")
   autocmd FileType volt       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType go         setlocal sw=4 sts=0 ts=4 noexpandtab
   autocmd FileType proto      setlocal sw=4 sts=0 ts=4 et
+  autocmd FileType toml       setlocal sw=2 sts=2 ts=2 et
 endif

@@ -1,7 +1,7 @@
 if has('nvim')
-  let s:path = expand('~/.cache/nvim/dein')
+  let s:path = empty($XDG_CACHE_HOME) ? expand('~/.cache/nvim/dein') : expand("$XDG_CACHE_HOME/nvim/dein")
 else
-  let s:path = expand('~/.cache/vim/dein')
+  let s:path = empty($XDG_CACHE_HOME) ? expand('~/.cache/vim/dein') : expand("$XDG_CACHE_HOME/vim/dein")
 endif
 
 let s:dein_dir = s:path
@@ -22,22 +22,15 @@ call dein#begin(s:path, expand('<sfile>'))
 
 call dein#load_toml('~/dotfiles/vim/rc/dein.toml', {'lazy': 0})
 call dein#load_toml('~/dotfiles/vim/rc/deinlazy.toml', {'lazy' : 1})
-
 if has('nvim')
   " call dein#load_toml('~/dotfiles/vim/rc/deinneo.toml', {})
 endif
-
-" call dein#add('Shougo/deoplete.nvim')
-" if !has('nvim')
-  " call dein#add('roxma/nvim-yarp')
-  " call dein#add('roxma/vim-hug-neovim-rpc')
-" endif
-" let g:deoplete#enable_at_startup = 1
-
 call dein#end()
 call dein#save_state()
 
-if dein#check_install()
+" let g:deoplete#enable_at_startup = 1
+
+if has('vim_starting') && dein#check_install()
   " Installation check.
   call dein#install()
 endif

@@ -1,9 +1,13 @@
-let g:quickrun_config = {}
+nmap <Leader>e <Plug>(quickrun)
+
+let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config._ = {
-  \ 'runner' : 'vimproc',
-  \ "runner/vimproc/updatetime" : 60,
-  \ 'outputter/buffer/split' : ':botright 8sp',
-  \ 'outputter/buffer/close_on_empty' : 1
+  \ 'runner': 'vimproc',
+  \ 'runner/vimproc/updatetime': 40,
+  \ 'outputter': 'buffered',
+  \ 'outputter/buffered/target': 'buffer',
+  \ 'outputter/buffer/split': ':botright 8sp',
+  \ 'outputter/buffer/close_on_empty': 1
   \}
 
 let g:quickrun_config['rspec/bundle'] = {
@@ -14,6 +18,7 @@ let g:quickrun_config['rspec/bundle'] = {
   \ 'outputter/buffer/filetype': 'rspec-result',
   \ 'filetype': 'rspec-result'
   \}
+
 let g:quickrun_config['rspec/normal'] = {
   \ 'type': 'rspec/normal',
   \ 'command': "rspec",
@@ -22,6 +27,7 @@ let g:quickrun_config['rspec/normal'] = {
   \ 'outputter/buffer/filetype': 'rspec-result',
   \ 'filetype': 'rspec-result'
   \}
+
 function! RSpecQuickrun()
   let b:quickrun_config = {'type' : 'rspec/bundle'}
 endfunction
@@ -72,3 +78,18 @@ let b:current_syntax = 'quickrun'
 if main_syntax == 'quickrun'
   unlet main_syntax
 endif
+
+" go test
+autocmd BufRead,BufNewFile *_test.go set filetype=go.test
+let g:quickrun_config['go.test'] = {
+  \'command': 'gotest',
+  \'cmdopt': '-v',
+ \ 'exec': '%c %o %s'
+  \}
+
+autocmd BufRead,BufNewFile *.go set filetype=go
+let g:quickrun_config['go'] = {
+  \'command': 'go',
+  \'cmdopt': 'test -v',
+ \ 'exec': '%c %o ./...'
+  \}

@@ -39,8 +39,10 @@ command! Rv source $MYVIMRC
 
 set helpfile=$VIMRUNTIME/doc/help.txt
 
-" ファイルタイプ判定をon
+"ファイルタイプの検索を有効にする
 filetype plugin on
+"そのファイルタイプにあわせたインデントを利用する
+filetype indent on
 
 " ;でコマンド入力( ;と:を入れ替)
 noremap ; :

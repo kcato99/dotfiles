@@ -8,5 +8,3 @@ let g:miniBufExplMaxSize = 10
 
 ":MtでMiniBufExplorerの表示トグル
 command! Mt :MBEToggle
-
-

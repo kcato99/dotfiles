@@ -1,18 +1,26 @@
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+let NERDTreeWinSize=28
+let NERDTreeHighlightCursorline=0
+let NERDTreeChDirMode=2
+let g:NERDTreeMapJumpNextSibling = '<C-b>'
+let g:NERDTreeMapJumpPrevSibling = '<C-v>'
+
 let modifiable=1
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+autocmd VimEnter * NERDTree
+" ctrl-n でtoggle
+map <C-n> :NERDTreeToggle<CR> :TagbarToggle<CR>
+" map <silent> <leader>tl :TagbarToggle<CR>
+
+" vimでdirectoryを開いた時にNERDTreeを開く
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
   exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
-
-" vimでdirectoryを開いた時にNERDTreeを開く
-autocmd StdinReadPre * let s:std_in=1
-autocmd vimenter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" ctrl-n でtoggle
-map <C-n> :NERDTreeToggle<CR>
-
 " ファイルの方をアクティブにする
 call NERDTreeHighlightFile('jade'   , 'green'   , 'none' , 'green'   , '#151515')
 call NERDTreeHighlightFile('ini'    , 'yellow'  , 'none' , 'yellow'  , '#151515')
@@ -30,15 +38,15 @@ call NERDTreeHighlightFile('php'    , 'Magenta' , 'none' , '#ff00ff' , '#151515'
 call NERDTreeHighlightFile('go'     , 'Magenta' , 'none' , '#ff00ff' , '#151515')
 
 " E121: Undefined variable: b:NERDTree
-autocmd VimLeave *  if !v:dying | execute 'tabdo NERDTreeClose' | endif
+" autocmd VimLeave *  if !v:dying | execute 'tabdo NERDTreeClose' | endif
 
-" NERDTreeとtaglistしか残らない場合は一緒に閉じる
+" NERDTreeとtagbarしか残らない場合は一緒に閉じる
 function! NoExcitingBuffersLeft()
   if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   if winnr("$") == 2
     let w1 = bufname(winbufnr(1))
     let w2 = bufname(winbufnr(2))
-    if ( exists(":NERDTree") && (w1 == "__Tag_List__" || w2 == "__Tag_List__") )
+    if ( exists(":NERDTree") && (w1 == "__Tag_Bar__" || w2 == "__Tag_Bar__") )
       if tabpagenr("$") == 1
         exec 'qa'
       else
