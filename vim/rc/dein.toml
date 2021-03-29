@@ -67,13 +67,6 @@ on_cmd = [
     'GFiles',
     'Ag',
 ]
-hook_add = '''
-nnoremap <silent> ,a :<C-u>Ag<CR>
-nnoremap <silent> ,f :<C-u>ProjectFiles<CR>
-nnoremap <silent> ,b :<C-u>Buffers<CR>
-nnoremap <silent> ,m :<C-u>History<CR>
-set rtp+=/usr/local/bin/fzf
-'''
 [[plugins]]
 repo = 'othree/eregex.vim'
 [[plugins]]

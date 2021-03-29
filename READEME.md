@@ -1,5 +1,16 @@
 ### memo
 
+- ctags install
+```
+brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+```
+- gotags install
+```
+go get -u github.com/jstemmer/gotags
+```
+
+
 ### tree
 ```
 brew install tree

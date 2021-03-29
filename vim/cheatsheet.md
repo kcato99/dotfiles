@@ -24,12 +24,18 @@
 - `<C-j>` : 下ウィンドウ移動
 - `<C-k>` : 上ウィンドウ移動
 - `<C-l>` : 右ウィンドウ移動
-- `gd` : コード定義ジャンプ(by coc/vim-lsp)
-- `gy` : コードタイプ定義ジャンプ(by coc/vim-lsp)
-- `gi` : コード実装ジャンプ(by coc/vim-lsp)
-- `gr` : コード参照ジャンプ(by coc/vim-lsp)
-- `K` : 定義表示
+<!-- - `gd` : コード定義ジャンプ(by coc/vim-lsp) -->
+<!-- - `gy` : コードタイプ定義ジャンプ(by coc/vim-lsp) -->
+<!-- - `gi` : コード実装ジャンプ(by coc/vim-lsp) -->
+<!-- - `gr` : コード参照ジャンプ(by coc/vim-lsp) -->
+<!-- - `K` : 定義表示 -->
 - `<Leader>rn` : 一括置換
+- `gd` lsp-definition
+- `gr` lsp-references
+- `gi` lsp-implementation
+- `gt` lsp-type-definition
+- `K` lsp-hover
+- `<Leader>rn` lsp-rename
 
 ### edit(normal mode)
 - `y9` : 行末までyank

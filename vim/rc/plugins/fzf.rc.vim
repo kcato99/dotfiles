@@ -1,3 +1,9 @@
+set rtp+=/usr/local/opt/fzf
+nnoremap <silent> ,a :<C-u>Ag<CR>
+nnoremap <silent> ,f :<C-u>ProjectFiles<CR>
+nnoremap <silent> ,b :<C-u>Buffers<CR>
+nnoremap <silent> ,m :<C-u>History<CR>
+
 " https://wonderwall.hatenablog.com/entry/2017/10/07/220000
 function! s:find_git_root()
   " プロジェクトルートで開く
