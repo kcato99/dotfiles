@@ -19,7 +19,7 @@ let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'badwolf'
 let g:airline_theme = 'deus'
 " タブバーをかっこよく
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 " 選択行列の表示をカスタム(デフォルトだと長くて横幅を圧迫するので最小限に)
 let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])

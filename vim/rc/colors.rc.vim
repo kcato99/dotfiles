@@ -4,19 +4,9 @@
 " ハイライト on
 " syntax on
 
-"let g:onedark_color_overrides = {
-"  \"black": {"gui": "#000000", "cterm": "16", "cterm16": "0" },
-"\}
-"let g:onedark_termcolors = 256
-" autocmd BufRead * colorscheme onedark
 
 " color scheme
-"call dein#add('joshdick/onedark.vim')
-"colorscheme onedark
-"colorscheme yuroyoro256
-
-"call dein#add('yuroyoro/yuroyoro256.vim')
-"autocmd FileType php :colorscheme yuroyoro256
+" @see dotfiles/vim/rc/dein.toml
 
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"

@@ -78,7 +78,7 @@ export LDFLAGS="-L/usr/local/opt/bison@2.7/lib"
 
 # go(global)
 # export GOPATH="$HOME/go"
-export GOPATH="$HOME/go/1.14.2"
+export GOPATH="$HOME/go/1.14.4"
 export PATH="$PATH:$GOPATH/bin"
 export GOBIN="$GOPATH/bin"
 export GOPRIVATE="github.com/10antz-inc"
@@ -96,3 +96,9 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ncurses/lib"
 export CPPFLAGS="-I/usr/local/opt/ncurses/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

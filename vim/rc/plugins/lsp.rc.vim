@@ -41,21 +41,21 @@ let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_settings_filetype_go = ['gopls']
 
 let g:lsp_settings = {}
-let g:lsp_settings['gopls'] = {
-  \  'workspace_config': {
-  \    'usePlaceholders': v:true,
-  \    'analyses': {
-  \      'fillstruct': v:true,
-  \    },
-  \  },
-  \  'initialization_options': {
-  \    'usePlaceholders': v:true,
-  \    'analyses': {
-  \      'fillstruct': v:true,
-  \    },
-  \  },
-  \}
-
+" let g:lsp_settings['gopls'] = {
+"   \  'workspace_config': {
+"   \    'usePlaceholders': v:true,
+"   \    'analyses': {
+"   \      'fillstruct': v:true,
+"   \    },
+"   \  },
+"   \  'initialization_options': {
+"   \    'usePlaceholders': v:true,
+"   \    'analyses': {
+"   \      'fillstruct': v:true,
+"   \    },
+"   \  },
+"   \}
+"
 
 autocmd BufWritePre <buffer> LspDocumentFormatSync
 " autocmd BufWritePre <buffer> call execute('LspCodeActionSync source.organizeImports')

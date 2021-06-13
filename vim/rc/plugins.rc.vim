@@ -18,3 +18,4 @@ source ~/dotfiles/vim/rc/plugins/lsp.rc.vim
 " source ~/dotfiles/vim/rc/plugins/coc.rc.vim
 source ~/dotfiles/vim/rc/plugins/airline.rc.vim
 " source ~/dotfiles/vim/rc/plugins/defx.rc.vim
+" source ~/dotfiles/vim/rc/plugins/buffergator.rc.vim

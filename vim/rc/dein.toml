@@ -1,39 +1,54 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
-repo = 'morhetz/gruvbox'
+repo = 'joshdick/onedark.vim'
 hook_add = '''
-  " soft/medium/hard
-  " color palette
-  " https://github.com/morhetz/gruvbox#palette
   syntax enable
   set background=dark
-  let g:gruvbox_bold=1
-  let g:gruvbox_italic=0
-  let g:gruvbox_transparent_bg=0
-  let g:gruvbox_underline=1
-  let g:gruvbox_undercurl=1
-  let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_dark="medium"
-  let g:gruvbox_contrast_light="medium"
-  let g:gruvbox_hls_cursor="orange"
-  let g:gruvbox_sign_column="bg1"
-  let g:gruvbox_color_column="bg1"
-  let g:gruvbox_vert_split="bg0"
-  let g:gruvbox_italicize_comments=1
-  let g:gruvbox_italicize_strings=0
-  let g:gruvbox_invert_selection=0
-  let g:gruvbox_invert_selection=0
-  let g:gruvbox_invert_indent_guides=0
-  let g:gruvbox_invert_tabline=0
-  let g:gruvbox_improved_strings=0
-  let g:gruvbox_improved_warnings=0
-  let g:gruvbox_guisp_fallback="bg"
+  let g:onedark_color_overrides = {
+   \"black": {"gui": "#000000", "cterm": "16", "cterm16": "0" },
+  \}
+  let g:onedark_termcolors = 256
 
   " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
   " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
-  autocmd MyAutoCmd VimEnter * nested colorscheme gruvbox
+  autocmd MyAutoCmd VimEnter * nested colorscheme onedark
 '''
+
+# [[plugins]]
+# repo = 'morhetz/gruvbox'
+# hook_add = '''
+#   " soft/medium/hard
+#   " color palette
+#   " https://github.com/morhetz/gruvbox#palette
+#   syntax enable
+#   set background=dark
+#   let g:gruvbox_bold=1
+#   let g:gruvbox_italic=0
+#   let g:gruvbox_transparent_bg=0
+#   let g:gruvbox_underline=1
+#   let g:gruvbox_undercurl=1
+#   let g:gruvbox_termcolors=256
+#   let g:gruvbox_contrast_dark="hard"
+#   let g:gruvbox_contrast_light="hard"
+#   let g:gruvbox_hls_cursor="orange"
+#   let g:gruvbox_sign_column="bg1"
+#   let g:gruvbox_color_column="bg1"
+#   let g:gruvbox_vert_split="bg0"
+#   let g:gruvbox_italicize_comments=1
+#   let g:gruvbox_italicize_strings=0
+#   let g:gruvbox_invert_selection=0
+#   let g:gruvbox_invert_selection=0
+#   let g:gruvbox_invert_indent_guides=0
+#   let g:gruvbox_invert_tabline=0
+#   let g:gruvbox_improved_strings=0
+#   let g:gruvbox_improved_warnings=0
+#   let g:gruvbox_guisp_fallback="bg"
+#
+#   " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
+#   " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
+#   autocmd MyAutoCmd VimEnter * nested colorscheme gruvbox
+# '''
 [[plugins]]
 repo = 'preservim/nerdtree'
 [[plugins]]
@@ -105,3 +120,5 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 # [[plugins]]
 # repo = 'Shougo/defx.nvim'
+# [[plugins]]
+# repo = 'jeetsukumaran/vim-buffergator'

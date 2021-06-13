@@ -1,7 +1,8 @@
 # ls
 case "${OSTYPE}" in
 freebsd*|darwin*)
-    alias ll="ls -alG"
+    # alias ll="ls -alG"
+    alias ll="ls -al --color=auto"
     zle -N expand-to-home-or-insert
     bindkey "@"  expand-to-home-or-insert
     ;;
@@ -39,11 +40,9 @@ alias gst='git status -s -b'
 alias gst="git log --date=short --max-count=1 --pretty=format:'%Cgreen%h %cd %Cblue%cn%x09%Creset%s' | tail -1 && echo '' && git status -s -b"
 
 alias ev='vim ~/dotfiles/vim/rc/*.rc.vim'
-alias asia='cd ~/Documents/git/asia-server'
-alias second='cd ~/Documents/git/second'
-alias gas='cd ~/Documents/git/google-spreadsheet-merge'
-alias rose='cd ~/Documents/git/rose-server'
-alias micro='cd ~/Documents/git/micro-svc-demo-game'
+alias shake='cd ~/Documents/git/shake-gateway'
+alias proto='cd ~/Documents/git/shake-backend-proto'
+alias live='cd ~/Documents/git/shake-live-backend'
 
 alias vim='nvim'
 alias vi='nvim'
